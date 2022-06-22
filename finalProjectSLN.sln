@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "komodoCafe", "komodoCafe", "{D677FEC5-E51B-46D6-AEFE-BD3856E4CC49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A19F9889-F79A-4CC1-B2FB-F02B5C19F7D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomodoCafe.Data", "komodoCafe\src\KomodoCafe.Data\KomodoCafe.Data.csproj", "{37CF062B-F667-402C-A670-6DC62C96E930}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomodoCafe.Repository", "komodoCafe\src\KomodoCafe.Repository\KomodoCafe.Repository.csproj", "{58184292-C043-46A8-8951-F04D88668422}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomodoCafe.UI", "komodoCafe\src\KomodoCafe.UI\KomodoCafe.UI.csproj", "{C224CC65-328C-41E8-8434-6204980A033E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{EE252767-A49E-43BF-B3D1-3FD20DC33DC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomooCafeData.Test", "komodoCafe\test\KomooCafeData.Test\KomooCafeData.Test.csproj", "{33A5956E-AB30-4057-91EA-35B2B95364D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37CF062B-F667-402C-A670-6DC62C96E930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37CF062B-F667-402C-A670-6DC62C96E930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37CF062B-F667-402C-A670-6DC62C96E930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37CF062B-F667-402C-A670-6DC62C96E930}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58184292-C043-46A8-8951-F04D88668422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58184292-C043-46A8-8951-F04D88668422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58184292-C043-46A8-8951-F04D88668422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58184292-C043-46A8-8951-F04D88668422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C224CC65-328C-41E8-8434-6204980A033E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C224CC65-328C-41E8-8434-6204980A033E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C224CC65-328C-41E8-8434-6204980A033E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C224CC65-328C-41E8-8434-6204980A033E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33A5956E-AB30-4057-91EA-35B2B95364D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33A5956E-AB30-4057-91EA-35B2B95364D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33A5956E-AB30-4057-91EA-35B2B95364D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33A5956E-AB30-4057-91EA-35B2B95364D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A19F9889-F79A-4CC1-B2FB-F02B5C19F7D0} = {D677FEC5-E51B-46D6-AEFE-BD3856E4CC49}
+		{37CF062B-F667-402C-A670-6DC62C96E930} = {A19F9889-F79A-4CC1-B2FB-F02B5C19F7D0}
+		{58184292-C043-46A8-8951-F04D88668422} = {A19F9889-F79A-4CC1-B2FB-F02B5C19F7D0}
+		{C224CC65-328C-41E8-8434-6204980A033E} = {A19F9889-F79A-4CC1-B2FB-F02B5C19F7D0}
+		{EE252767-A49E-43BF-B3D1-3FD20DC33DC5} = {D677FEC5-E51B-46D6-AEFE-BD3856E4CC49}
+		{33A5956E-AB30-4057-91EA-35B2B95364D7} = {EE252767-A49E-43BF-B3D1-3FD20DC33DC5}
+	EndGlobalSection
+EndGlobal
