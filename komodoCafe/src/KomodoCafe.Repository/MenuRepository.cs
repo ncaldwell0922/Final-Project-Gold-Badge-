@@ -10,7 +10,7 @@ public class MenuRepository
                 _count++;
                 menuItem.MealNumber = _count;
                 _menuDatabase.Add(menuItem);
-                Convert.ToString(menuItem.Price);
+                // Convert.ToString(menuItem.Price);
                 return true;
             }
             else
