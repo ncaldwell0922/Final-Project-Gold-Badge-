@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\KomodoCafe.Data\KomodoCafe.Data.csproj" />
+    <ProjectReference Include="..\src\KomodoCafe.Repository\KomodoCafe.Repository.csproj" />
   </ItemGroup>
 
 </Project>
