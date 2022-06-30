@@ -53,7 +53,7 @@ public class Program_UI
         "1. See All Claims \n" +
         "2. Take Care Of Next Claim \n" +
         "3. Enter A New Claim \n" +
-        "4. Exit Application \n");
+        "4. Exit Application");
 
         string userInput = Console.ReadLine();
         switch(userInput)
@@ -107,7 +107,7 @@ public class Program_UI
             ClaimsDepartment nextClaim = _qRepo.ViewNextClaim();
             DisplayClaim(nextClaim);
 
-            System.Console.WriteLine("Would you like to work this claim? y/n \n");
+            System.Console.WriteLine("Would you like to work this claim? y/n");
             string userSelection = Console.ReadLine();
             if(userSelection == "y")
             {
@@ -135,23 +135,23 @@ public class Program_UI
 
         System.Console.WriteLine("*** NEW CLAIMS *** \n" +
         "------------------------------------ \n" +
-        "Enter the Claim ID: \n");
+        "Enter the Claim ID:");
         claim.ID = int.Parse(Console.ReadLine());
 
-        System.Console.WriteLine("Enter the Claim Type: \n");
+        System.Console.WriteLine("Enter the Claim Type:");
         claim.TypeOfClaim = GetClaimType(claim);
 
-        System.Console.WriteLine("Enter a claim description: \n");
+        System.Console.WriteLine("Enter a claim description:");
         claim.Description = Console.ReadLine();
 
-        System.Console.WriteLine("Enter the damage amount: \n" +
-        "$");
+        System.Console.WriteLine("Enter the damage amount: \n");
+        Console.Write("$ ");
         claim.ClaimAmount = double.Parse(Console.ReadLine());
 
-        System.Console.WriteLine("Date of Accident(MM/DD/YYYY) \n");
+        System.Console.WriteLine("Date of Accident(MM/DD/YYYY)");
         claim.DateOfIncident = DateOnly.Parse(Console.ReadLine());
 
-        System.Console.WriteLine("Date of Claim(MM/DD/YYYY) \n");
+        System.Console.WriteLine("Date of Claim(MM/DD/YYYY)");
         claim.DateOfClaim = DateOnly.Parse(Console.ReadLine());
 
         bool isSuccessful = _qRepo.AddClaimToQueue(claim);
@@ -179,7 +179,7 @@ public class Program_UI
         System.Console.WriteLine(
             "1. Car \n" +
             "2. Theft \n" +
-            "3. Home \n"
+            "3. Home"
         );
 
         string userTypePick = Console.ReadLine()
@@ -193,7 +193,7 @@ public class Program_UI
             case "3":
                 return ClaimType.Home;
             default:
-                System.Console.WriteLine("Invalid Input");
+                System.Console.WriteLine("Invalid Input. Claim set as Undefined.");
                 return ClaimType.Undefined;
         }
     }

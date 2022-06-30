@@ -80,9 +80,6 @@ public class Program_UI
         Console.Clear();
         Menu menuItem = new Menu();
 
-        System.Console.WriteLine("Please enter the number for your Menu Item: ");
-        menuItem.MealNumber = int.Parse(Console.ReadLine());
-
         System.Console.WriteLine("Enter a name for your Menu Item: ");
         menuItem.MealName = Console.ReadLine();
 
@@ -98,7 +95,7 @@ public class Program_UI
         bool isSuccessful = _mRepo.AddMenuItemToDB(menuItem);
         if(isSuccessful)
         {
-            System.Console.WriteLine($"Your Menu Item Number {menuItem.MealNumber} named {menuItem.MealName} has been added!");
+            System.Console.WriteLine($"Your Menu Item named {menuItem.MealName} has been added!");
         }
         else
         {
