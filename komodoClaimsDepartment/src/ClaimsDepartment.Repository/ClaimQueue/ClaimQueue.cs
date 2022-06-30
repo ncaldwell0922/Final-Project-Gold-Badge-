@@ -31,4 +31,17 @@ using System.Threading.Tasks;
             }
             return null;
         }
+
+        public bool DiscardClaim()
+        {
+                ClaimsDepartment claim = ViewNextClaim();
+
+                if(claim is null)
+                {
+                        return false;
+                }
+
+                _queueRepository.Dequeue();
+                return true;
+        }
     }

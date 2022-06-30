@@ -1,4 +1,8 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 public class ClaimsDepartment
 {
     public ClaimsDepartment(){}
@@ -9,9 +13,8 @@ public class ClaimsDepartment
         ClaimType typeOfClaim,
         string description,
         double claimAmount,
-        DateTime dateOfIncident,
-        DateTime dateOfClaim,
-        bool isValid
+        DateOnly dateOfIncident,
+        DateOnly dateOfClaim
     )
     {
         ID = id;
@@ -20,14 +23,33 @@ public class ClaimsDepartment
         ClaimAmount = claimAmount;
         DateOfIncident = dateOfIncident;
         DateOfClaim = dateOfClaim;
-        IsValid = isValid;
     }
 
     public int ID { get; set; }
     public ClaimType TypeOfClaim { get; set; }
     public string Description { get; set; }
     public double ClaimAmount { get; set; }
-    public DateTime DateOfIncident { get; set; }
-    public DateTime DateOfClaim { get; set; }
-    public bool IsValid { get; set; }
+    public DateOnly DateOfIncident { get; set; }
+    public DateOnly DateOfClaim { get; set; }
+    public bool IsValid 
+    { 
+        get
+        {
+            int result = DateOfIncident.CompareTo(DateOfClaim);
+            string timeResult;
+            if(result > 30)
+            {
+                return false;
+            }
+            else if (result <= 30)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
+    }
 }

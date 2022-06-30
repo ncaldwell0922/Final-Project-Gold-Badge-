@@ -3,5 +3,6 @@
     {
         Car = 1,
         Home,
-        Theft
+        Theft,
+        Undefined
     }

@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\ClaimsDepartment.Data\ClaimsDepartment.Data.csproj" />
-    <ProjectReference Include="..\ClaimsDepartment.Repository\ClaimsDepartment.Repository.csproj" />
+    <ProjectReference Include="..\CustomerPOCOs\CustomerPOCOs.csproj" />
+    <ProjectReference Include="..\CustomerRepository\CustomerRepository.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
