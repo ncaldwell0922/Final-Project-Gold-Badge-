@@ -11,10 +11,11 @@ public class CustomerRepository
     {
         if(customer != null)
         {
-            _count++;
-            customer.LastName = _count;
+            int startingCount = _customerDatabase.Count();
             _customerDatabase.Add(customer);
-            return true;
+            bool wasAdded =(_customerDatabase.Count() > startingCount) ? true : false;
+
+        return wasAdded;
         }
         else
         {
@@ -27,22 +28,22 @@ public class CustomerRepository
         return _customerDatabase;
     }
 
-    public Customer GetCustomerByLastName(string lastName)
-        {
-            foreach(Customer c in _customerDatabase) 
+    public Customer GetCustomerByFullName(string FullName)
+    {
+        foreach(Customer c in _customerDatabase) 
             {
-                if(c.LastName == lastName)
+                if(c.FullName == c.FullName)
                 {
                     return c; 
                 }
             }
 
-            return null; 
-        }
+        return null; 
+    }
 
-    public bool UpdateCustomer(string lastName, Customer newCustomer)
+    public bool UpdateCustomer(Customer newCustomer)
         {
-            var oldCustomer = GetCustomerByLastName(lastName); // Using the "Find One" method to locate and store it's returned value (Store) in our variable.
+            var oldCustomer = GetCustomerByFullName(newCustomer.ToString()); 
 
             if(oldCustomer != null)
             {
@@ -58,9 +59,9 @@ public class CustomerRepository
             }
         }
 
-    public bool DeleteCard(string lastName)
+    public bool DeleteCustomer(string firstName, string lastName)
         {
-                System.Console.WriteLine(lastName);
+                System.Console.WriteLine(firstName, lastName);
                 Customer customerToDelete = _customerDatabase.FirstOrDefault(c => c.LastName == lastName);
                 return _customerDatabase.Remove(customerToDelete);
         }

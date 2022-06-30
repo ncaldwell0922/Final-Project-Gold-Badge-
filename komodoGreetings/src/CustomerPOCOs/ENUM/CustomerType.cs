@@ -3,5 +3,6 @@
     {
         Potential = 1,
         Current,
-        Past
+        Past,
+        Undefined
     }

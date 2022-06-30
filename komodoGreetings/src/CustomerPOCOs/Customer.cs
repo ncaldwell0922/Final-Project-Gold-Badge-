@@ -16,6 +16,12 @@ public class Customer
 
     public string FirstName { get; set; }
     public string LastName { get; set; }
+    public string FullName { 
+        get
+        {
+            return $"{FirstName} {LastName}";
+        }
+        }
     public CustomerType TypeOfCustomer { get; set; }
     public string Email { 
         get
@@ -28,10 +34,12 @@ public class Customer
             {
                 System.Console.WriteLine("It's been a long time since we've heard from you, we want you back.");
             }
-            else
+            else 
             {
                 System.Console.WriteLine("We currently have the lowest rates on Helicopter Insurance!");
             }
+            
+            return null;
         }
     }
 }
